@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Dashboard</h2>
+        <button id="logout">Logout</button>
+
+        <!-- Add Expense Form -->
+        <form id="add-expense-form">
+            <input type="date" id="date" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- Update Expense Form -->
+        <form id="update-expense-form" style="display: none;">
+            <input type="hidden" id="expense-id">
+            <input type="date" id="update-date" required>
+            <input type="text" id="update-category" placeholder="Category" required>
+            <input type="number" id="update-amount" placeholder="Amount" required>
+            <button type="submit">Update Expense</button>
+        </form>
+
+        <div id="expenses-list"></div>
+        <canvas id="expenses-chart"></canvas>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
